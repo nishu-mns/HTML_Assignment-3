@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-3</title>
+    <style>
+        * {
+            margin: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"] {
+            width: 150px;
+        }
+
+        textarea {
+            width: 150px;
+        }
+
+        .inner {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .outer {
+            display: flex;
+        }
+
+        select {
+            width: 160px;
+            margin-bottom: 15px;
+        }
+
+        .opt {
+            display: flex;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        textarea,
+        input[type="tel"],
+        select {
+            margin-top: -2px;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: -2px;
+        }
+
+        @media only screen and (max-width: 548px) {
+            .outer {
+                flex-direction: column;
+            }
+
+            .opt {
+                flex-direction: column;
+            }
+            input[type="checkbox"],
+            input[type="radio"]{
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form1" method="post" action="#">
+        <div class="outer">
+            <div class="inner">
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" />
+            </div>
+            <div class="inner">
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" />
+            </div>
+        </div>
+        <div class="outer">
+            <div class="inner">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" />
+            </div>
+            <div class="inner">
+                <label for="contact-num">Contact Number:</label>
+                <input type="tel" id="contact-num" name="contact-num" />
+            </div>
+        </div>
+        <div class="outer">
+            <div class="inner">
+                <label for="uname">Username:</label>
+                <input type="text" id="uname" name="uname" />
+            </div>
+            <div class="inner">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" />
+            </div>
+        </div>
+        <div class="outer">
+            <div class="inner">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address"></textarea>
+            </div>
+            <div class="inner">
+                <div>
+                    <label>Gender:</label>
+                </div>
+                <div class="opt">
+                    <div>
+                        <input type="radio" id="male" name="male" value="male">
+                        <label for="male">Male</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="female" name="female" value="female">
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="outer">
+            <div class="inner">
+                <label for="qualification">Qualification:</label>
+                <select name="qualification" id="qualification">
+                    <option value="" disabled selected>--Select--</option>
+                    <option value="B.Tech">B.Tech</option>
+                    <option value="M.Tech">M.Tech</option>
+                    <option value="BSC">BSC</option>
+                    <option value="MSC">MSC</option>
+                </select>
+            </div>
+            <div class="inner">
+                <label for="experience">Experience:</label>
+                <select name="experience" id="experience">
+                    <option value="" disabled selected>--Select--</option>
+                    <option value="less">Less</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+        </div>
+        <div class="opt">
+            <div>Coding Languages:</div>
+
+            <div>
+                <input type="checkbox" id="c" name="c" />
+                <label for="c">C/C++</label>
+            </div>
+            <div>
+                <input type="checkbox" id="java" name="java" />
+                <label for="java">Java</label>
+            </div>
+            <div>
+                <input type="checkbox" id="c_sharp" name="c_sharp" />
+                <label for="c_sharp">C#</label>
+            </div>
+            <div>
+                <input type="checkbox" id="php" name="php" />
+                <label for="php">PHP</label>
+            </div>
+            <div>
+                <input type="checkbox" id="python" name="python" />
+                <label for="python">Python</label>
+            </div>
+        </div>
+
+        <input type="submit" />
+    </form>
+</body>
+
+</html>
